@@ -43,7 +43,9 @@ public class BlogPage extends TestBase{
 	public WebElement blogsLink;
 	
 	
-	
+	/*
+	 * add a new blog
+	 */
 	public BlogPage addNewBlog(String name, String age, String exp, String blogArea,String profession ){
 		nameTextBox.sendKeys(name);
 		ageTextBox.sendKeys(age);
@@ -67,6 +69,9 @@ public class BlogPage extends TestBase{
 		return new BlogPage();
 	}
 	
+	/*
+	 * navigate to Blogs listing page
+	 */
 	public BlogsPage clickOnBlogs(){
 		blogsLink.click();
 		return new BlogsPage();

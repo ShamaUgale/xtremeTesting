@@ -29,7 +29,10 @@ public class BlogsPage extends TestBase{
 	public WebElement professionTxt; 
 	
 	
-	
+	/*
+	 * verify if the currently added blog is listed on blogs listing page.
+	 * If listed , then verify the contents of the blog added.
+	 */
 	public boolean verifyBlogCreated(String name, String age, String exp, String blogArea,String profession ){
 		int size=blogs.size();
 		boolean isNameValid=nameTxt.getText().trim().equalsIgnoreCase(name);

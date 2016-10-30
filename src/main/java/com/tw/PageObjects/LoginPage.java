@@ -20,7 +20,9 @@ public class LoginPage extends TestBase{
 	public WebElement loginBtn;
 	
 
-	
+	/*
+	 * Login to the application
+	 */
 	public BlogPage doLogin(String userName, String password){
 		userNameTxtBox.sendKeys(userName);
 		passwordTxtBox.sendKeys(password);

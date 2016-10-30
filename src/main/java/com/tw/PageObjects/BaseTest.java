@@ -12,9 +12,9 @@ public class BaseTest{
 
 	protected WebDriver driver;
 	
-	
-	
-	
+	/*
+	 * initialize the driver and navigate to testURL placed in config.properties file
+	 */
 	@BeforeSuite
 	public void setUp() throws IOException{
 		TestBase base= new TestBase();
@@ -23,6 +23,9 @@ public class BaseTest{
 		base.driver.navigate().to(base.config.getProperty("TestURL"));
 	}
 	
+	/*
+	 * close the browser instance after the tests
+	 */
 	@AfterSuite
 	public void tearDown(){
 		driver.quit();

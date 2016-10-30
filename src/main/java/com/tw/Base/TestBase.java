@@ -18,6 +18,10 @@ public class TestBase {
 	
 
 
+	/*
+	 * Initializes config.properties file and driver object based on the value of "browserType" on config.properties file
+	 * 
+	 */
 	public void initialize() throws IOException{
 		
 		if(config==null){
@@ -42,6 +46,7 @@ public class TestBase {
 			driver= new InternetExplorerDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		}
 	}
 	
